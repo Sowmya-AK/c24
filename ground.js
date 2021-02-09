@@ -4,12 +4,12 @@ class ground
 	{
 		var options={
 			isStatic:true			
-			}
+			};
 		this.x=x;
 		this.y=y;
-		this.w=w
-		this.h=h
-		this.body=Bodies.rectangle(x, y, w, h , options);
+		this.w=w;
+		this.h=h;
+		this.body=Bodies.rectangle(x, y,this.w,this.h , options);
  		World.add(world, this.body);
 
 	}
@@ -18,13 +18,13 @@ class ground
 			
 			var groundPos=this.body.position;		
 
-			push()
+			push();
 			translate(groundPos.x, groundPos.y);
-			rectMode(CENTER)
+			rectMode(CENTER);
 			strokeWeight(4);
-			fill(255,255,0)
+			fill("lightblue");
 			rect(0,0,this.w, this.h);
-			pop()
+			pop();
 			
 	}
 
